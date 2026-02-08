@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 
 import HomePage from './pages/HomePage';
 import ConceptsPage from './pages/ConceptsPage';
@@ -33,7 +33,18 @@ const App: React.FC = () => {
            <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-500 rounded-full blur-[150px] animate-pulse"></div>
            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600 rounded-full blur-[150px] animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
+<header className="sticky top-0 z-20 bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border-b border-white/20 dark:border-slate-800/50">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3">
+    <Link
+      to="/"
+      className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-bold hover:opacity-90 transition"
+    >
+      ← Trang chủ
+    </Link>
 
+    <div className="font-black">Kỹ thuật Trải Phẳng</div>
+  </div>
+</header>
         {/* Main Content Area */}
         <main className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12">
           <Routes>
